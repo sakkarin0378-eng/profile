@@ -117,8 +117,8 @@ html_content = """<!DOCTYPE html>
 
 <div class="profile-card">
     <div class="profile-pic">
-        <!-- ใส่ชื่อไฟล์รูปภาพ 4392.jpg ลงในโค้ดเรียบร้อยแล้ว -->
-        <img src="4392.jpg" alt="รูปโปรไฟล์ของ ศักรินทร์ เอมอาจ">
+        <!-- อัปเดตลิงก์รูปภาพเป็นที่อยู่ไฟล์ในเครื่องคอมพิวเตอร์ของคุณเรียบร้อยแล้ว -->
+        <img src="file:///C:/Users/USER/Pictures/4392.jpg" alt="รูปโปรไฟล์ของ ศักรินทร์ เอมอาจ">
     </div>
     
     <h1>ศักรินทร์ เอมอาจ</h1>
@@ -155,4 +155,4 @@ file_name = "index.html"
 with open(file_name, "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print(f"File updated and created: {file_name}")
+print(f"File updated with local path: {file_name}")
