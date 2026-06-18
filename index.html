@@ -12,6 +12,7 @@ html_content = """<!DOCTYPE html>
 
     <style>
         body {
+            /* เปลี่ยนมาใช้ฟอนต์ Prompt */
             font-family: 'Prompt', sans-serif;
             background-color: #f0f4f8;
             color: #333;
@@ -53,6 +54,12 @@ html_content = """<!DOCTYPE html>
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .profile-pic span {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            font-weight: 300;
         }
 
         h1 {
@@ -117,8 +124,9 @@ html_content = """<!DOCTYPE html>
 
 <div class="profile-card">
     <div class="profile-pic">
-        <!-- อัปเดตลิงก์รูปภาพเป็นที่อยู่ไฟล์ในเครื่องคอมพิวเตอร์ของคุณเรียบร้อยแล้ว -->
-        <img src="file:///C:/Users/USER/Pictures/4392.jpg" alt="รูปโปรไฟล์ของ ศักรินทร์ เอมอาจ">
+        <!-- ใส่ Path รูปภาพของคุณใน src="" ด้านล่างนี้ เช่น src="profile.jpg" -->
+        <img src="" alt="รูปโปรไฟล์" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span style="display: none;">[รูปโปรไฟล์]</span>
     </div>
     
     <h1>ศักรินทร์ เอมอาจ</h1>
@@ -150,5 +158,6 @@ html_content = """<!DOCTYPE html>
 
 </body>
 </html>"""
+
 
 
