@@ -12,7 +12,6 @@ html_content = """<!DOCTYPE html>
 
     <style>
         body {
-            /* เปลี่ยนมาใช้ฟอนต์ Prompt */
             font-family: 'Prompt', sans-serif;
             background-color: #f0f4f8;
             color: #333;
@@ -54,12 +53,6 @@ html_content = """<!DOCTYPE html>
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .profile-pic span {
-            color: #7f8c8d;
-            font-size: 1.2rem;
-            font-weight: 300;
         }
 
         h1 {
@@ -124,9 +117,8 @@ html_content = """<!DOCTYPE html>
 
 <div class="profile-card">
     <div class="profile-pic">
-        <!-- ใส่ Path รูปภาพของคุณใน src="" ด้านล่างนี้ เช่น src="profile.jpg" -->
-        <img src="" alt="รูปโปรไฟล์" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span style="display: none;">[รูปโปรไฟล์]</span>
+        <!-- ใส่ชื่อไฟล์รูปภาพ 4392.jpg ลงในโค้ดเรียบร้อยแล้ว -->
+        <img src="4392.jpg" alt="รูปโปรไฟล์ของ ศักรินทร์ เอมอาจ">
     </div>
     
     <h1>ศักรินทร์ เอมอาจ</h1>
@@ -157,3 +149,10 @@ html_content = """<!DOCTYPE html>
 </div>
 
 </body>
+</html>"""
+
+file_name = "index.html"
+with open(file_name, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"File updated and created: {file_name}")
