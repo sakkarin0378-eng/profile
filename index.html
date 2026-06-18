@@ -1,1 +1,158 @@
-นาย ศักรินทร์ เอมอาจ 
+html_content = """<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - ศักรินทร์ เอมอาจ</title>
+    <style>
+        /* สมมติว่ามีไฟล์ฟอนต์ Torsilp Khitthueng Thoe อยู่ในโฟลเดอร์เดียวกัน */
+        @font-face {
+            font-family: 'Torsilp Khitthueng Thoe';
+            src: local('Torsilp Khitthueng Thoe'), url('Torsilp-Khitthueng-Thoe.ttf') format('truetype');
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Torsilp Khitthueng Thoe', 'Sarabun', 'Kanit', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            border-top: 6px solid #4a90e2;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: #e1e8ed;
+            margin: 0 auto 25px;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-pic span {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            margin: 0 0 5px;
+            color: #2c3e50;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .info-container {
+            text-align: left;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .info-row {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #cbd5e1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .value {
+            color: #1e293b;
+            font-size: 1.25rem;
+        }
+        
+        .contact {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-card">
+    <div class="profile-pic">
+        <!-- ใส่ Path รูปภาพของคุณใน src="" ด้านล่างนี้ เช่น src="images/myprofile.jpg" -->
+        <img src="" alt="รูปโปรไฟล์" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span style="display: none;">[รูปโปรไฟล์]</span>
+    </div>
+    
+    <h1>ศักรินทร์ เอมอาจ</h1>
+    <div class="subtitle">มหาวิทยาลัยราชภัฏหมู่บ้านจอมบึง</div>
+    
+    <div class="info-container">
+        <div class="info-row">
+            <span class="label">รหัสนักศึกษา</span>
+            <span class="value">694245012</span>
+        </div>
+        <div class="info-row">
+            <span class="label">สาขาวิชา</span>
+            <span class="value">วิทยาการคอมพิวเตอร์</span>
+        </div>
+        <div class="info-row">
+            <span class="label">คณะ</span>
+            <span class="value">วิทยาศาสตร์และเทคโนโลยี</span>
+        </div>
+        <div class="info-row">
+            <span class="label">เบอร์โทรศัพท์</span>
+            <span class="value"><a href="tel:0615694943" class="contact">0615694943</a></span>
+        </div>
+        <div class="info-row">
+            <span class="label">อีเมล</span>
+            <span class="value"><a href="mailto:sakkarin0378@gmail.com" class="contact">sakkarin0378@gmail.com</a></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>"""
+
+file_name = "index.html"
+with open(file_name, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"File created: {file_name}")
